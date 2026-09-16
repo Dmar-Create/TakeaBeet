@@ -77,8 +77,14 @@ button{font:inherit}
   .brand{font-size:19px}.sub{font-size:11px}
   .content{padding:10px 18px}
   .inner{width:min(1050px,90vw)}
-  .question{font-size:34px;margin-bottom:16px}
-  .answers{gap:10px}
+  .question{
+  font-size:34px;
+  margin-bottom:28px;
+}
+  .answers{
+  column-gap:18px;
+  row-gap:14px;
+}
   .answer{min-height:74px;border-radius:14px;padding:12px 18px;font-size:20px}
   .finish{grid-template-columns:1fr 205px;gap:28px}
   .finish h1{font-size:43px;margin-bottom:10px}
@@ -180,9 +186,6 @@ function submit(answer){
 document.querySelectorAll('.answer').forEach(btn=>{
   btn.addEventListener('click',()=>submit(btn.dataset.answer));
 });
-if('serviceWorker' in navigator){
-  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
-}
 </script>
 </body>
 </html>
