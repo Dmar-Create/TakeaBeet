@@ -27,9 +27,30 @@ button{font:inherit}
 .brand{font-size:25px;font-weight:900;letter-spacing:-.04em;color:var(--beet)}
 .sub{font-size:13px;color:#6e676a}
 .content{flex:1;display:flex;align-items:center;justify-content:center;padding:28px}
-.inner{width:min(1200px,88vw)}
-.question{font-size:clamp(34px,5vw,64px);line-height:1.02;font-weight:900;text-align:center;letter-spacing:-.035em;margin:0 0 34px;color:var(--beet)}
-.answers{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.inner{
+  width:min(1200px,88vw);
+}
+
+#questionScreen{
+  transform:translateY(-10vh);
+}
+
+.question{
+  font-size:clamp(34px,5vw,64px);
+  line-height:1.02;
+  font-weight:900;
+  text-align:center;
+  letter-spacing:-.035em;
+  margin:0 0 55px;
+  color:var(--beet);
+}
+
+.answers{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  column-gap:30px;
+  row-gap:26px;
+}
 .answer{min-height:125px;border:0;border-radius:20px;padding:22px 28px;text-align:left;font-size:clamp(22px,2.7vw,36px);font-weight:800;display:flex;align-items:center;gap:16px;cursor:pointer;transition:transform .1s ease,filter .1s ease}
 .answer:active{transform:scale(.985);filter:brightness(.96)}
 .answer:nth-child(1){background:#F5C15D;color:#242124}
